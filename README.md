@@ -4,9 +4,20 @@
 
 ```bash
 pip3 install django
+pip3 install djangorestframework
+
 python3 -m django startproject main
 cd main
 python3 manage.py runserver
+```
+
+`/main/settings.py`
+
+```diff
+INSTALLED_APPS = [
+    ...
++   'rest_framework',
+]
 ```
 
 ## React
