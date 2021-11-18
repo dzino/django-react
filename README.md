@@ -14,6 +14,7 @@ python3 manage.py runserver
 Moving the React project to the Django project. Rename the folder to `frontend`.
 
 ```bash
+cd frontend
 yarn
 yarn build
 ```
