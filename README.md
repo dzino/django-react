@@ -53,7 +53,49 @@ urlpatterns = [
 ]
 ```
 
-# Sources of:
+# Entities
+
+## Applications
+
+Part of the project.
+
+### Add
+
+```bash
+python3 manage.py startapp <name>
+```
+
+`/main/settings.py`
+
+```diff
+INSTALLED_APPS = [
+    ...
+    'django.contrib.messages',
++   '<name>',
+]
+```
+
+`/main/urls.py`
+
+```diff
+- from django.urls import path
++ from django.urls import path, include
+
+urlpatterns = [
+    ...
++   path('<name>/', include('<name>.urls')),
+]
+```
+
+```bash
+touch <name>/urls.py
+touch <name>/serializers.py
+```
+
+### Migrations
+
+Working with the database. Automatically generated.
+
 
 - https://www.youtube.com/watch?v=6K83dgjkQNw
 - https://www.youtube.com/watch?v=nJ9BohUzgtM
