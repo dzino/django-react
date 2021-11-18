@@ -19,7 +19,7 @@ yarn
 yarn build
 ```
 
-/main/settings.py
+`/main/settings.py`
 
 ```diff
 ...
@@ -40,7 +40,7 @@ TEMPLATES = [
 + ]
 ```
 
-/main/urls.py
+`/main/urls.py`
 
 ```diff
 from django.contrib import admin
