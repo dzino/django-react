@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "start": "python3 manage.py runserver",
+    "build": "cd frontend; yarn build"
+  }
+}

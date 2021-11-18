@@ -107,7 +107,10 @@ touch <name>/serializers.py
 
 Working with the database. Automatically generated.
 
+# Sources of
 
-- https://www.youtube.com/watch?v=6K83dgjkQNw
+- https://www.youtube.com/watch?v=jCMaO2d6anE
+- https://www.django-rest-framework.org
 - https://www.youtube.com/watch?v=nJ9BohUzgtM
+- https://www.youtube.com/watch?v=6K83dgjkQNw
 - https://www.youtube.com/watch?v=F9o4GSkSo40
