@@ -70,6 +70,11 @@ urlpatterns = [
 
 Part of the project.
 
+```
+Models ─┬─ Serializers ─ Views ─ Urls ─ Main/Urls
+        └─ Admin
+```
+
 ### Add
 
 ```bash
@@ -103,13 +108,29 @@ touch <name>/urls.py
 touch <name>/serializers.py
 ```
 
-### Migrations
+### Models
 
-Working with the database. Automatically generated.
+Working with the database.
+
+`/<name>/models.py`
+
+```bash
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
+
+Super user:
+
+```bash
+python3 manage.py createsuperuser
+```
+
+###
 
 # Sources of
 
 - https://www.youtube.com/watch?v=jCMaO2d6anE
+- https://djangodoc.ru/3.2/topics/db/models/
 - https://www.django-rest-framework.org
 - https://www.youtube.com/watch?v=nJ9BohUzgtM
 - https://www.youtube.com/watch?v=6K83dgjkQNw
