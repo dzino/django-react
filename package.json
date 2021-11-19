@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "start": "python3 manage.py runserver",
-    "build": "cd frontend; yarn build",
-    "makemigrations": "python3 manage.py makemigrations",
-    "migrate": "python3 manage.py migrate"
+    "startServer": "python3 manage.py runserver",
+    "buildFrontend": "cd frontend; yarn build",
+    "migrate": "python3 manage.py makemigrations && python3 manage.py migrate",
+    "showmigrations": "python3 manage.py showmigrations"
   }
 }
