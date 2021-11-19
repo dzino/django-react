@@ -18,10 +18,24 @@ class CarSerializer(serializers.ModelSerializer):
 
 # Substitution of information about the group
 
-class ManufCarSerializer(serializers.ModelSerializer):
+class CarManufSerializer(serializers.ModelSerializer):
 
   manufacturer = ManufacturerSerializer()
 
   class Meta:
     model = Car
     fields = '__all__'
+
+# Sorting by groups
+
+class ManufCarSerializer(serializers.ModelSerializer):
+
+  posts = serializers.SerializerMethodField()
+
+  class Meta:
+    model = Manufacturer
+    fields = '__all__'
+
+  @staticmethod
+  def get_posts(obj):
+    return CarSerializer(Car.objects.filter(manufacturer=obj), many=True).data
