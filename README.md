@@ -125,13 +125,22 @@ Super user:
 python3 manage.py createsuperuser
 ```
 
-###
+# Stack
+
+- Django
+- TypeScript
+- React
+- Redux
+- Saga
+- Jest
+- Prototypes
 
 # Sources of
 
 - https://www.youtube.com/watch?v=jCMaO2d6anE
-- https://djangodoc.ru/3.2/topics/db/models/
-- https://www.django-rest-framework.org
+- Models: https://djangodoc.ru/3.2/topics/db/models/
+- Doc: https://www.django-rest-framework.org
 - https://www.youtube.com/watch?v=nJ9BohUzgtM
 - https://www.youtube.com/watch?v=6K83dgjkQNw
 - https://www.youtube.com/watch?v=F9o4GSkSo40
+- React routing: https://youtu.be/jCMaO2d6anE?t=7588
