@@ -35,7 +35,7 @@ class CarManufViewSet(viewsets.ModelViewSet):
   }
 
   def get_serializer_class(self):
-      return self.action_manufacturer.get(self.action, self.serializer_class)
+    return self.action_manufacturer.get(self.action, self.serializer_class)
 
 # Sorting by groups
 
@@ -45,8 +45,9 @@ class ManufCarViewSet(viewsets.ModelViewSet):
   serializer_class = ManufacturerSerializer
 
   action_car = {
+    "list": ManufCarSerializer,
     "retrieve": ManufCarSerializer
   }
 
   def get_serializer_class(self):
-      return self.action_car.get(self.action, self.serializer_class)
+    return self.action_car.get(self.action, self.serializer_class)
