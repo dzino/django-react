@@ -4,12 +4,11 @@ import { compose, createStore, applyMiddleware } from "redux"
 import { Provider } from "react-redux"
 import thunk from "redux-thunk"
 import createSagaMiddleware from "@redux-saga/core"
-import { rootReducer } from "./redux/rootReducer"
-import { sagaWatcher } from "./sagas"
-import "bootstrap/dist/css/bootstrap.min.css"
-import "./index.css"
+import { rootReducer } from "redux/rootReducer"
+import { sagaWatcher } from "sagas"
+import "index.css"
 
-import App from "./views"
+import App from "views"
 
 /**
  * # Redux
