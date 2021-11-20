@@ -50,14 +50,6 @@ export default function Bar({ children }: Props) {
       <AppBar className={classes.appBar} position="fixed">
         <Container fixed>
           <Toolbar>
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              className={classes.menuButton}
-            >
-              <Menu />
-            </IconButton>
             <Typography variant="h6" component="h1" className={classes.title}>
               Django & React
             </Typography>
@@ -78,14 +70,6 @@ export default function Bar({ children }: Props) {
                 </Link>
               </Breadcrumbs>
             </Box>
-            <Box mr={3}>
-              <Button color="inherit" variant="outlined">
-                Log In
-              </Button>
-            </Box>
-            <Button color="secondary" variant="contained">
-              Sign Up
-            </Button>
           </Toolbar>
         </Container>
       </AppBar>
