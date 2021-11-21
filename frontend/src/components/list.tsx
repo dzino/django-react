@@ -21,7 +21,8 @@ export default function List() {
   const classes = useStyles()
   const target = useSelector((state: Redux.RootState) => state.groups.target)
   const manufacturer = useSelector(
-    (state: Redux.RootState) => state.groups.value[target]?.name || []
+    (state: Redux.RootState) =>
+      state.groups.value.find((i) => i.id === target)?.name || []
   )
   const posts = useSelector(
     (state: Redux.RootState) =>
