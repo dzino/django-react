@@ -1,3 +1,9 @@
+# TODO
+
+- скачать видео
+- расширения для IDE выписать
+- Аутентификация и роли в Django
+
 # Installation
 
 ## Django
@@ -5,6 +11,7 @@
 ```bash
 pip3 install django
 pip3 install djangorestframework
+pip3 install django-cors-headers
 
 python3 -m django startproject main
 cd main
@@ -17,7 +24,20 @@ python3 manage.py runserver
 INSTALLED_APPS = [
     ...
 +   'rest_framework',
++   'corsheaders',
 ]
+
+MIDDLEWARE = [
++    'corsheaders.middleware.CorsMiddleware', # At the top of the list
+    ...
+]
+
++ CORS_ORIGIN_WHITELIST = [
++     'http://google.com',
++     'http://hostname.example.com',
++     'http://localhost:8000',
++     'http://127.0.0.1:9000'
++ ]
 ```
 
 ## React

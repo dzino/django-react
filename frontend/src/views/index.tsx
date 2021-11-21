@@ -23,8 +23,12 @@ export default function App() {
 
 function useGetManufacturerCar() {
   const dispatch: (v: Actions.All) => void = useDispatch()
+  const dev = window.location.host === "localhost:3000"
+  const url = dev
+    ? "http://127.0.0.1:8000/api/manufacturer_car/"
+    : "/api/manufacturer_car/"
   return () => {
-    fetch("/api/manufacturer_car/", {
+    fetch(url, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     })
