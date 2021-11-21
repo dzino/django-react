@@ -4,17 +4,13 @@ import { Redux } from "declaration"
 // Material-UI
 import {
   AppBar,
-  Button,
   Container,
-  IconButton,
   Toolbar,
   Typography,
   Box,
   Breadcrumbs,
-  Link,
-  Paper,
+  Link as MuiLink,
 } from "@material-ui/core"
-import { Menu } from "@material-ui/icons"
 import { makeStyles } from "@material-ui/core/styles"
 
 const useStyles = makeStyles((theme) => ({
@@ -35,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
   },
   main: {
     paddingTop: theme.spacing(9),
+  },
+  link: {
+    color: "#ccc",
   },
 }))
 
@@ -63,7 +62,7 @@ export default function Bar({ children }: Props) {
                   <Link
                     underline="hover"
                     color="inherit"
-                    href={`/group/${group.id}`}
+                      className={classes.link}
                   >
                     {group.name}
                   </Link>
