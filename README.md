@@ -64,9 +64,7 @@ urlpatterns = [
 ]
 ```
 
-# Entities
-
-## Applications
+# Applications
 
 Part of the project.
 
@@ -75,7 +73,7 @@ Models ─┬─ Serializers ─ Views ─ Urls ─ Main/Urls
         └─ Admin
 ```
 
-### Add
+## Add
 
 ```bash
 python3 manage.py startapp <name>
@@ -108,7 +106,7 @@ touch <name>/urls.py
 touch <name>/serializers.py
 ```
 
-### Models
+## Models
 
 Working with the database.
 
