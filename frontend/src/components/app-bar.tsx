@@ -1,5 +1,5 @@
-// import { useDispatch, useSelector } from "react-redux"
-// import * as Dec from "declaration"
+import { useSelector } from "react-redux"
+import { Redux } from "declaration"
 
 // Material-UI
 import {
@@ -44,6 +44,7 @@ interface Props {
 
 export default function Bar({ children }: Props) {
   const classes = useStyles()
+  const groups = useSelector((state: Redux.RootState) => state.groups.value)
 
   return (
     <>
@@ -58,16 +59,15 @@ export default function Bar({ children }: Props) {
                 aria-label="breadcrumb"
                 className={classes.bottomNavigation}
               >
-                <Link underline="hover" color="inherit" href="/">
-                  MUI
-                </Link>
-                <Link
-                  underline="hover"
-                  color="inherit"
-                  href="/getting-started/installation/"
-                >
-                  Core
-                </Link>
+                {groups.map((group) => (
+                  <Link
+                    underline="hover"
+                    color="inherit"
+                    href={`/group/${group.id}`}
+                  >
+                    {group.name}
+                  </Link>
+                ))}
               </Breadcrumbs>
             </Box>
           </Toolbar>

@@ -1,15 +1,13 @@
-// import { useDispatch, useSelector } from "react-redux"
-// import * as Dec from "declaration"
+import { useSelector } from "react-redux"
+import { Redux } from "declaration"
 
 // Material-UI
 import {
-  Button,
   Container,
   Typography,
   Grid,
   Card,
   CardContent,
-  CardActions,
 } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 
@@ -21,62 +19,31 @@ const useStyles = makeStyles((theme) => ({
 
 export default function List() {
   const classes = useStyles()
+  const target = useSelector((state: Redux.RootState) => state.groups.target)
+  const manufacturer = useSelector(
+    (state: Redux.RootState) => state.groups.value[target]?.name || []
+  )
+  const posts = useSelector(
+    (state: Redux.RootState) => state.groups.value[target]?.posts || []
+  )
 
   return (
     <Container fixed>
       <Grid container>
-        <Grid item md={6}>
-          <Card className={classes.card}>
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Lizard
-              </Typography>
-              <Typography variant="body2" color="textSecondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item md={6}>
-          <Card className={classes.card}>
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Lizard
-              </Typography>
-              <Typography variant="body2" color="textSecondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item md={6}>
-          <Card className={classes.card}>
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Lizard
-              </Typography>
-              <Typography variant="body2" color="textSecondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item md={6}>
-          <Card className={classes.card}>
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Lizard
-              </Typography>
-              <Typography variant="body2" color="textSecondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
+        {posts.map((post) => (
+          <Grid item md={6}>
+            <Card className={classes.card}>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {post.name}
+                </Typography>
+                <Typography variant="body2" color="textSecondary">
+                  Manufacturer: {manufacturer}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
       </Grid>
     </Container>
   )
