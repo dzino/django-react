@@ -24,7 +24,8 @@ export default function List() {
     (state: Redux.RootState) => state.groups.value[target]?.name || []
   )
   const posts = useSelector(
-    (state: Redux.RootState) => state.groups.value[target]?.posts || []
+    (state: Redux.RootState) =>
+      state.groups.value.find((i) => i.id === target)?.posts || []
   )
 
   return (
