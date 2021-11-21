@@ -125,7 +125,9 @@ python3 manage.py createsuperuser
 
 # Stack
 
+- Python
 - Django
+- Django REST framework
 - TypeScript
 - React
 - Redux
@@ -133,7 +135,7 @@ python3 manage.py createsuperuser
 - Jest
 - Prototypes
 - Material-UI
-- React-router-dom
+- React Router DOM
 
 # Sources of
 
