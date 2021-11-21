@@ -133,6 +133,7 @@ python3 manage.py createsuperuser
 - Jest
 - Prototypes
 - Material-UI
+- React-router-dom
 
 # Sources of
 
@@ -143,3 +144,4 @@ python3 manage.py createsuperuser
 - https://www.youtube.com/watch?v=6K83dgjkQNw
 - https://www.youtube.com/watch?v=F9o4GSkSo40
 - React routing: https://youtu.be/jCMaO2d6anE?t=7588
+- React-router-dom: https://github.com/remix-run/react-router/blob/main/docs/getting-started/tutorial.md

@@ -6,6 +6,7 @@ import thunk from "redux-thunk"
 import createSagaMiddleware from "@redux-saga/core"
 import { rootReducer } from "redux/rootReducer"
 import { sagaWatcher } from "sagas"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import "index.css"
 
 import App from "views"
@@ -27,7 +28,12 @@ saga.run(sagaWatcher)
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/category/:category" element={<App />} />
+        </Routes>
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

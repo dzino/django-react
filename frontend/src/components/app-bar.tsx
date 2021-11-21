@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux"
 import { Redux } from "declaration"
+import { Link } from "react-router-dom"
 
 // Material-UI
 import {
@@ -59,12 +60,14 @@ export default function Bar({ children }: Props) {
                 className={classes.bottomNavigation}
               >
                 {groups.map((group) => (
-                  <Link
-                    underline="hover"
-                    color="inherit"
+                  <Link to={`/category/${group.id}`}>
+                    <MuiLink
+                      underline="hover"
+                      color="inherit"
                       className={classes.link}
-                  >
-                    {group.name}
+                    >
+                      {group.name}
+                    </MuiLink>
                   </Link>
                 ))}
               </Breadcrumbs>
