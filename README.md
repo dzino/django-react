@@ -139,7 +139,7 @@ python3 manage.py createsuperuser
 
 # Stack
 
-- Python
+- Python3
 - Django
 - Django REST framework
 - TypeScript
