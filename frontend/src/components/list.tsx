@@ -33,7 +33,7 @@ export default function List() {
     <Container fixed>
       <Grid container>
         {posts.map((post) => (
-          <Grid item md={6}>
+          <Grid key={`post${post.id}`} item md={6}>
             <Card className={classes.card}>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">

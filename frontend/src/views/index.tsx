@@ -11,8 +11,8 @@ export default function App() {
   const params = useParams()
   const groups = useSelector((state: Redux.RootState) => state.groups.value)
 
-  useEffect(manufacturerCar, [])
-  useEffect(selectManufacturer, [params, groups])
+  useEffect(manufacturerCar, []) // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(selectManufacturer, [params, groups]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Bar>

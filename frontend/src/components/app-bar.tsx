@@ -10,7 +10,6 @@ import {
   Typography,
   Box,
   Breadcrumbs,
-  Link as MuiLink,
 } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 
@@ -60,14 +59,12 @@ export default function Bar({ children }: Props) {
                 className={classes.bottomNavigation}
               >
                 {groups.map((group) => (
-                  <Link to={`/category/${group.id}`}>
-                    <MuiLink
-                      underline="hover"
-                      color="inherit"
-                      className={classes.link}
-                    >
-                      {group.name}
-                    </MuiLink>
+                  <Link
+                    className={classes.link}
+                    key={`group${group.id}`}
+                    to={`/category/${group.id}`}
+                  >
+                    <Typography>{group.name}</Typography>
                   </Link>
                 ))}
               </Breadcrumbs>
