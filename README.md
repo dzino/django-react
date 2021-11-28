@@ -136,6 +136,16 @@ Super user:
 python3 manage.py createsuperuser
 ```
 
+# Authentication
+
+```bash
+pip3 install PyJWT
+```
+
+`/api/serializers.py`... `/api/views.py`... `/main/views.py`...
+
+Commit: `Django API Authentication using JWT Tokens`
+
 # Stack
 
 - Python3
@@ -160,3 +170,6 @@ python3 manage.py createsuperuser
 - https://www.youtube.com/watch?v=F9o4GSkSo40
 - React routing: https://youtu.be/jCMaO2d6anE?t=7588
 - React-router-dom: https://github.com/remix-run/react-router/blob/main/docs/getting-started/tutorial.md
+- Django API Authentication using JWT Tokens:
+  - https://www.youtube.com/watch?v=PUzgZrS_piQ&list=PLlameCF3cMEtfyO6H7WXUAqoIJO21bDNp
+  - https://github.com/scalablescripts/django-auth
